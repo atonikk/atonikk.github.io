@@ -67,6 +67,25 @@
         color: #333;
         text-align: left;
       }
+      #logo {
+        max-width: 100%; /* Asegura que el logo no exceda el contenedor */
+        height: auto; /* Mantiene las proporciones del logo */
+      }
+      @media (max-width: 600px) {
+        #logo {
+          width: 200px;
+        }
+      }
+      @media (min-width: 601px) and (max-width: 1024px) {
+        #logo {
+          width: 150px;
+        }
+      }
+      @media (min-width: 1025px) {
+        #logo {
+          width: 350px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -75,25 +94,8 @@
         src="logo.png"
         alt="Atonik Logo"
         id="logo"
-        style="display: block; margin: 0 auto 20px; height: auto"
+        style="display: block; margin: 0 auto 20px"
       />
-      <script>
-        function resizeLogo() {
-          const logo = document.getElementById("logo");
-          const screenWidth = window.innerWidth;
-
-          if (screenWidth < 600) {
-            logo.style.maxWidth = "10%";
-          } else if (screenWidth < 1200) {
-            logo.style.maxWidth = "35%";
-          } else {
-            logo.style.maxWidth = "50%";
-          }
-        }
-
-        window.addEventListener("resize", resizeLogo);
-        window.addEventListener("load", resizeLogo);
-      </script>
       <h1>Términos y Condiciones de Uso de la aplicacion Atonik</h1>
       <p>
         Al descargar, instalar y utilizar la aplicación Atonik (en adelante, "la
